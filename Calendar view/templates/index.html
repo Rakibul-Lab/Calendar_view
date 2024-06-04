@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar Viewer</title>
+    <style>
+      body {
+        background-color: #f0f0f0; /* Light gray */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff; /* White */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+      }
+      h1 {
+        text-align: center;
+        color: #333; /* Dark gray */
+      }
+      form {
+        text-align: center;
+      }
+      label {
+        margin-right: 10px;
+      }
+      input[type="number"] {
+        width: 70px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #007bff; /* Blue */
+        color: #fff; /* White */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #0056b3; /* Darker blue */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calendar Viewer</h1>
+      <form action="/calendar" method="post">
+        <label for="year">Enter year:</label>
+        <input type="number" id="year" name="year" required />
+        <label for="month">Enter month:</label>
+        <input
+          type="number"
+          id="month"
+          name="month"
+          min="1"
+          max="12"
+          required
+        />
+        <button type="submit">Show Calendar</button>
+      </form>
+    </div>
+  </body>
+</html>
